@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+    <br><br>
+    username <input type="text" id="usrname"/><br>
+    firstname <input type="text" id="fname"/><br>
+    lastname <input type="text" id="lname"/><br>
+    Email Id <input type="text" id="email"/><br>
+    Mobile No <input type="text" id="mob"/><br>
+    Country <input type="text" id="country"/><br>
+    City <input type="text" id="city"/><br>
+    Pincode <input type="text" id="pin"/><br>
+    <button type="submit" onclick="validateForm()">Submit</button>
+  
+    </form>
+
+
+<script>	
+	function validateForm() {
+    var x =document.getElementById("usrname").value;
+    if (x == "") {
+        usrname.style.backgroundColor = "red";
+        alert("UsrName must be filled out");
+        return false;
+        
+    }
+       var y =document.getElementById("fname").value;
+    if (y == "") {
+        fname.style.backgroundColor = "red";
+        alert("first Name must be filled out");
+        return false;
+        
+    }
+        var z =document.getElementById("lname").value;
+    if (z == "") {
+        lname.style.backgroundColor = "red";
+        alert("last Name must be filled out");
+        return false;
+        
+    }
+        var a =document.getElementById("email").value;
+        var atpos = a.indexOf("@");
+        var dotpos = a.lastIndexOf(".");
+        if (a == ""|| atpos<1 || dotpos<atpos+2 || dotpos+2>=a.length) {
+        email.style.backgroundColor = "red";
+        alert("please enter a valid email address");
+        return false;
+        
+    }
+        var b =document.getElementById("mob").value;
+    if (b == ""|| b.length!=10 || isNaN(b)) {
+        mob.style.backgroundColor = "red";
+        alert("please enter your 10 digit mobile numbver");
+        return false;
+        
+    }
+        var c =document.getElementById("country").value;
+    if (c == "") {
+        country.style.backgroundColor = "red";
+        alert("country must be filled out");
+        return false;
+        
+    }
+        var d =document.getElementById("city").value;
+    if (d == "") {
+        city.style.backgroundColor = "red";
+        alert("city must be filled out");
+        return false;
+        
+    }
+        var e =document.getElementById("pin").value;
+    if (e == "" || e.length!=6 || isNaN(e)) {
+        pin.style.backgroundColor = "red";
+        alert("pin must be filled out");
+        return false;
+        
+    }
+        confirm("Press a button!");
+} 
+</script>
+
+</body>
+</html>
